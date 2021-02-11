@@ -9,22 +9,22 @@
     <license>MIT</license>
     <keywords>debug,buildconfig,buildinfo,phonegap,cordova</keywords>
     <author>Mikihiro Hayashi</author>
-    <repo>https://github.com/lynrin/cordova-plugin-buildinfo</repo>
+    <repo>https://github.com/sshrestha/cordova-plugin-buildinfo</repo>
 
     <hook type="after_plugin_install" src="scripts/after_install.js" />
     <hook type="before_plugin_uninstall" src="scripts/before_uninstall.js" />
 
     <js-module src="www/buildinfo.js" name="BuildInfo">
-        <clobbers target="BuildInfo"/>
+        <clobbers target="cordova.plugins.BuildInfo"/>
     </js-module>
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BuildInfo">
-                <param name="android-package" value="org.apache.cordova.buildinfo.BuildInfo"/>
+                <param name="android-package" value="com.reach.cordova.buildinfo.BuildInfo"/>
             </feature>
         </config-file>
-        <source-file src="src/android/BuildInfo.java" target-dir="src/org/apache/cordova/buildinfo"/>
+        <source-file src="src/android/BuildInfo.java" target-dir="src/com/reach/cordova/buildinfo"/>
         <framework src="src/android/BuildInfo.gradle" custom="true" type="gradleReference"/>
     </platform>
 

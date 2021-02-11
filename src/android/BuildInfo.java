@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-package org.apache.cordova.buildinfo;
+package com.reach.cordova.buildinfo;
 
 import android.app.Activity;
 import android.content.pm.PackageInfo;
